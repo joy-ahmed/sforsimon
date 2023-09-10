@@ -1,0 +1,29 @@
+openapi: 3.1.0
+info:
+  title: Social App
+  description: Our first Social app - Joy Ahmed
+  version: 1.0.1
+
+servers:
+  - url: http://localhost:9000/api/v1
+    description: Optional server description, e.g. Main (production) server
+  - url: http://localhost:9000/api/v1
+    description: Optional server description, e.g. Internal staging server for testing
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+
+    BearerAuth:
+      type: http
+      scheme: bearer
+
+paths:
+  /instagram:
+    get:
+      summary: This will returns username, followers and follows
+      responses:
+        "200": #status code
+          description: returns an object
