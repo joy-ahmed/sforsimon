@@ -60,8 +60,10 @@ paths:
       summary: This will returns as pased the id via payload
       parameters:
         - name: id
-          deafult: 5
+          default: 5
           in: path
+          schema:
+            type: string
       responses:
         "200": #status code
           description: returns an object
@@ -70,9 +72,5 @@ paths:
               schema:
                 type: object
                 properties:
-                  username:
-                    type: string
-                  followers:
-                    type: string
-                  follows:
+                  params:
                     type: string
