@@ -27,3 +27,52 @@ paths:
       responses:
         "200": #status code
           description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+                  follows:
+                    type: string
+    post:
+      summary: This will returns username, followers and follows
+      responses:
+        "200": #status code
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+                  follows:
+                    type: string
+
+  /{id}:
+    get:
+      summary: This will returns as pased the id via payload
+      parameters:
+        - name: id
+          deafult: 5
+          in: path
+      responses:
+        "200": #status code
+          description: returns an object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+                  follows:
+                    type: string
